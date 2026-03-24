@@ -9,7 +9,7 @@ from fastapi.staticfiles import StaticFiles
 import uvicorn
 import os
 
-from routes import crop, disease, chat, voice, dashboard
+from routes import crop, disease, chat, voice, dashboard, irrigation
 
 app = FastAPI(
     title="AgriMind AI API",
@@ -31,6 +31,7 @@ app.add_middleware(
 # Register routes
 app.include_router(dashboard.router, prefix="/api/dashboard", tags=["Dashboard"])
 app.include_router(crop.router, prefix="/api", tags=["Crop Prediction"])
+app.include_router(irrigation.router, prefix="/api", tags=["Irrigation Planner"])
 app.include_router(disease.router, prefix="/api", tags=["Disease Detection"])
 app.include_router(chat.router, prefix="/api", tags=["Chat Assistant"])
 app.include_router(voice.router, prefix="/api", tags=["Voice"])

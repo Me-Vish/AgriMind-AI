@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import {
-  LayoutDashboard, Sprout, ScanSearch,
+  LayoutDashboard, Sprout, Droplets, ScanSearch,
   MessageSquare, TrendingUp, Leaf, UserRound
 } from 'lucide-react'
 import { t, type Language } from '../../i18n'
@@ -8,6 +8,7 @@ import { t, type Language } from '../../i18n'
 const NAV_ITEMS = [
   { path: '/dashboard', label: 'dashboard', icon: LayoutDashboard },
   { path: '/crop-prediction', label: 'cropPrediction', icon: Sprout },
+  { path: '/irrigation-planner', label: 'irrigationPlanner', icon: Droplets },
   { path: '/disease-detection', label: 'diseaseDetection', icon: ScanSearch },
   { path: '/chat', label: 'chatAssistant', icon: MessageSquare },
   { path: '/market', label: 'marketInsights', icon: TrendingUp },

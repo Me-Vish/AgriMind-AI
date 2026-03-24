@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import Dashboard from './pages/Dashboard'
 import CropPrediction from './pages/CropPrediction'
+import IrrigationPlanner from './pages/IrrigationPlanner'
 import DiseaseDetection from './pages/DiseaseDetection'
 import ChatAssistant from './pages/ChatAssistant'
 import MarketInsights from './pages/MarketInsights'
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/" element={<ProtectedLayout />}>
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="crop-prediction" element={<CropPrediction />} />
+              <Route path="irrigation-planner" element={<IrrigationPlanner />} />
               <Route path="disease-detection" element={<DiseaseDetection />} />
               <Route path="chat" element={<ChatAssistant />} />
               <Route path="market" element={<MarketInsights />} />

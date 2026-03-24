@@ -29,6 +29,20 @@ export interface CropPredictionInput {
 export const predictCrop = (data: CropPredictionInput) =>
   api.post('/predict-crop', data).then(r => r.data)
 
+export interface IrrigationPlannerInput {
+  crop: string
+  soil_type: string
+  growth_stage: 'sowing' | 'vegetative' | 'flowering' | 'harvest'
+  farm_size: number
+  temperature: number
+  humidity: number
+  rainfall_7d: number
+  language?: string
+}
+
+export const getIrrigationPlan = (data: IrrigationPlannerInput) =>
+  api.post('/irrigation-plan', data).then(r => r.data)
+
 // ─── Disease Detection ────────────────────────────────────────────────────────
 export const detectDisease = (file: File, language = 'en') => {
   const form = new FormData()
